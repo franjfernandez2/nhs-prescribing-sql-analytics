@@ -1,0 +1,35 @@
+-- load_data.sql
+-- Documents how to load the raw NHSBSA prescribing CSV into PostgreSQL.
+--
+-- Dataset:
+-- English Prescribing Dataset (EPD) with SNOMED Code
+--
+-- Publisher:
+-- NHS Business Services Authority (NHSBSA)
+--
+-- Official source:
+-- https://opendata.nhsbsa.net/dataset/english-prescribing-dataset-epd-with-snomed-code
+--
+-- File used:
+-- English Prescribing Dataset (EPD) with SNOMED code - Jan 2026
+--
+-- Expected local file:
+-- data/prescribing_jan_2026.csv
+--
+-- The raw CSV is several GB in size and is not included in this repository.
+-- Download the CSV or ZIP from the official NHSBSA Open Data page, extract it
+-- if needed, and save it locally as data/prescribing_jan_2026.csv.
+--
+-- Important:
+-- Run this script from the project root:
+-- /Users/fff/nhs-prescribing-sql-analytics
+--
+-- First create the table:
+-- psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing -f sql/00_schema/schema.sql
+--
+-- Then load the CSV:
+-- psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing -f sql/00_schema/load_data.sql
+--
+-- Password:
+-- postgres
+\copy raw_prescribing_jan_2026 FROM 'data/prescribing_jan_2026.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');

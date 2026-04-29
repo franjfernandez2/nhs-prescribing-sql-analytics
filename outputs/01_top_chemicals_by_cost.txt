@@ -1,0 +1,24 @@
+                   bnf_chemical_substance                   | total_items | total_actual_cost 
+------------------------------------------------------------+-------------+-------------------
+ Tirzepatide                                                |      292949 |       67204353.65
+ Detection Sensor Interstitial Fluid/Gluc                   |      388264 |       31772196.60
+ BeclometDiprop/Formoterol                                  |      803643 |       24413904.52
+ Catheters                                                  |      130696 |       16936289.47
+ BeclometDiprop/Formoterol/Glycopyrronium (Corticosteroids) |      322214 |       15771779.70
+ Edoxaban                                                   |      321365 |       15022674.31
+ Empagliflozin                                              |      393788 |       14720596.45
+ Budesonide                                                 |      448894 |       14718962.23
+ Sacubitril/valsartan                                       |      165239 |       14052840.06
+ Semaglutide                                                |      131415 |       11457404.28
+ Ileostomy Bags                                             |       66824 |       11450592.56
+ Estradiol                                                  |      742815 |       11215500.52
+ Wound Management & Other Dressings                         |      282429 |       10589130.74
+ Colecalciferol                                             |     2488198 |       10110164.34
+ Insulin aspart                                             |      230467 |        9554150.86
+ Colostomy Bags                                             |       37689 |        8920046.66
+ Insulin glargine                                           |      177520 |        7811094.55
+ Mesalazine (Systemic)                                      |      136525 |        7576224.60
+ Omeprazole                                                 |     2962907 |        7399905.44
+ Lisdexamfetamine dimesylate                                |      107014 |        7062959.98
+(20 rows)
+

@@ -1,0 +1,24 @@
+ bnf_chemical_substance_code |                    bnf_chemical_substance                    | total_items | total_actual_cost | avg_cost_per_item 
+-----------------------------+--------------------------------------------------------------+-------------+-------------------+-------------------
+ 0914041C0                   | Tube feed 1.5 kcal/ml peptide based (0914041)                |        1086 |         693106.28 |            638.22
+ 0914032C0                   | Tube feed 1.5 kcal/ml peptide based (0914032)                |        1457 |         909912.74 |            624.51
+ 0914011N0                   | Tube feed 2 kcal/ml with fibre (0914011)                     |        1244 |         748676.18 |            601.83
+ 0914021F0                   | Tube feed 1.5 kcal/ml with fibre (0914021)                   |        1153 |         650144.05 |            563.87
+ 0605010S0                   | Somatropin                                                   |        3108 |        1726564.12 |            555.52
+ 0914011J0                   | Tube feed 1.5 kcal/ml with fibre (0914011)                   |        2934 |        1337500.98 |            455.86
+ 0913131A0                   | Powder amino acid formula (0913131)                          |        2086 |         916498.42 |            439.36
+ 0914011H0                   | Tube feed 1.5 kcal/ml (0914011)                              |        1566 |         681873.61 |            435.42
+ 0402020AB                   | Paliperidone                                                 |        1212 |         499151.94 |            411.84
+ 0803042S0                   | Triptorelin embonate                                         |        2441 |         979953.60 |            401.46
+ 0914021D0                   | Tube feed 1.2 kcal/ml with fibre (0914021)                   |        1548 |         585508.53 |            378.24
+ 0103030S0                   | Sucralfate                                                   |        2064 |         762394.09 |            369.38
+ 0105040A0                   | Sodium cromoglicate                                          |        1561 |         451790.98 |            289.42
+ 0501070I0                   | Colistimethate sodium                                        |        2495 |         682220.88 |            273.44
+ 0913061C0                   | RtS 1.5 kcal/ml m/sk higher protein, higher energy (0913061) |        1744 |         450653.22 |            258.40
+ 0913021F0                   | Ready to serve 1.5 kcal/ml milkshake with fibre (0913021)    |        4108 |        1060141.49 |            258.07
+ 0913021I0                   | Ready to serve 2.4 kcal/ml milkshake lower volume (0913021)  |        1207 |         302399.60 |            250.54
+ 0913021E0                   | Ready to serve 1.5 kcal/ml milkshake (0913021)               |        2472 |         592203.61 |            239.56
+ 2335                        | Colostomy Bags                                               |       37689 |        8920046.66 |            236.68
+ 0402020AD                   | Aripiprazole                                                 |        1196 |         281675.22 |            235.51
+(20 rows)
+

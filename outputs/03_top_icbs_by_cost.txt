@@ -1,0 +1,24 @@
+                                 icb_name                                  | icb_code | total_items | total_actual_cost | avg_cost_per_item 
+---------------------------------------------------------------------------+----------+-------------+-------------------+-------------------
+ NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD                    | QHM      |     7850732 |       55005847.78 |              7.01
+ NHS GREATER MANCHESTER INTEGRATED CARE BOARD                              | QOP      |     5927361 |       50274220.52 |              8.48
+ NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD                         | QYG      |     5635603 |       47295566.01 |              8.39
+ NHS WEST YORKSHIRE INTEGRATED CARE BOARD                                  | QWO      |     4950206 |       41007770.83 |              8.28
+ NHS HUMBER AND NORTH YORKSHIRE INTEGRATED CARE BOARD                      | QOQ      |     3877155 |       30936617.84 |              7.98
+ NHS SUSSEX INTEGRATED CARE BOARD                                          | QNX      |     3136122 |       29854994.39 |              9.52
+ NHS KENT AND MEDWAY INTEGRATED CARE BOARD                                 | QKS      |     3228905 |       29853926.67 |              9.25
+ NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD                     | QRL      |     3100933 |       29801971.06 |              9.61
+ NHS LANCASHIRE AND SOUTH CUMBRIA INTEGRATED CARE BOARD                    | QE1      |     3663375 |       29289020.45 |              8.00
+ NHS NORTH WEST LONDON INTEGRATED CARE BOARD                               | QRV      |     3410916 |       27244304.97 |              7.99
+ NHS NORTH EAST LONDON INTEGRATED CARE BOARD                               | QMF      |     3371729 |       26529659.56 |              7.87
+ NHS BUCKINGHAMSHIRE, OXFORDSHIRE AND BERKSHIRE WEST INTEGRATED CARE BOARD | QU9      |     2714029 |       24947560.27 |              9.19
+ NHS BIRMINGHAM AND SOLIHULL INTEGRATED CARE BOARD                         | QHL      |     2326212 |       23652895.44 |             10.17
+ NHS SOUTH YORKSHIRE INTEGRATED CARE BOARD                                 | QF7      |     3340853 |       23567857.90 |              7.05
+ NHS BLACK COUNTRY INTEGRATED CARE BOARD                                   | QUA      |     2349759 |       22895318.26 |              9.74
+ NHS SOUTH EAST LONDON INTEGRATED CARE BOARD                               | QKK      |     2395456 |       22094923.43 |              9.22
+ NHS HERTFORDSHIRE AND WEST ESSEX INTEGRATED CARE BOARD                    | QM7      |     2525105 |       20363256.79 |              8.06
+ NHS DEVON INTEGRATED CARE BOARD                                           | QJK      |     2477095 |       20255910.30 |              8.18
+ NHS STAFFORDSHIRE AND STOKE-ON-TRENT INTEGRATED CARE BOARD                | QNC      |     2342691 |       19933915.33 |              8.51
+ NHS NORTH CENTRAL LONDON INTEGRATED CARE BOARD                            | QMJ      |     2265942 |       19322904.11 |              8.53
+(20 rows)
+

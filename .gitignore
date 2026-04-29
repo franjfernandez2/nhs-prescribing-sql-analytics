@@ -1,0 +1,23 @@
+# Raw data files
+data/*.csv
+data/*.zip
+data/*.gz
+data/*.xlsx
+
+# Keep small reproducible sample data
+!sample_data/*.csv
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Environment variables
+.env
+
+# Exported CSV outputs
+outputs/*.csv
+
+# Keep folders
+!data/.gitkeep
+!outputs/.gitkeep
+!screenshots/.gitkeep

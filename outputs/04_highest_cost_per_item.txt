@@ -1,0 +1,24 @@
+                    bnf_chemical_substance                    | total_items | total_actual_cost | avg_cost_per_item 
+--------------------------------------------------------------+-------------+-------------------+-------------------
+ Tube feed 1.5 kcal/ml peptide based (0914041)                |        1086 |         693106.28 |            638.22
+ Tube feed 1.5 kcal/ml peptide based (0914032)                |        1457 |         909912.74 |            624.51
+ Tube feed 2 kcal/ml with fibre (0914011)                     |        1244 |         748676.18 |            601.83
+ Tube feed 1.5 kcal/ml with fibre (0914021)                   |        1153 |         650144.05 |            563.87
+ Somatropin                                                   |        3108 |        1726564.12 |            555.52
+ Tube feed 1.5 kcal/ml with fibre (0914011)                   |        2934 |        1337500.98 |            455.86
+ Powder amino acid formula (0913131)                          |        2086 |         916498.42 |            439.36
+ Tube feed 1.5 kcal/ml (0914011)                              |        1566 |         681873.61 |            435.42
+ Triptorelin embonate                                         |        2441 |         979953.60 |            401.46
+ Tube feed 1.2 kcal/ml with fibre (0914021)                   |        1548 |         585508.53 |            378.24
+ Sucralfate                                                   |        2091 |         778280.25 |            372.20
+ Paliperidone                                                 |        1568 |         525092.94 |            334.88
+ Colistimethate sodium                                        |        2495 |         682220.88 |            273.44
+ RtS 1.5 kcal/ml m/sk higher protein, higher energy (0913061) |        1744 |         450653.22 |            258.40
+ Ready to serve 1.5 kcal/ml milkshake with fibre (0913021)    |        4108 |        1060141.49 |            258.07
+ Ready to serve 2.4 kcal/ml milkshake lower volume (0913021)  |        1207 |         302399.60 |            250.54
+ Ready to serve 1.5 kcal/ml milkshake (0913021)               |        2472 |         592203.61 |            239.56
+ Colostomy Bags                                               |       37689 |        8920046.66 |            236.68
+ Tirzepatide                                                  |      292949 |       67204353.65 |            229.41
+ RtS 2.4 kcal/ml milkshake lower volume with fibre (0913021)  |        2139 |         486163.07 |            227.29
+(20 rows)
+

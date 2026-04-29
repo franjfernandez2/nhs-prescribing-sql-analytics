@@ -1,0 +1,24 @@
+ bnf_presentation_code |                    bnf_presentation_name                    | total_items | total_actual_cost | avg_cost_per_item 
+-----------------------+-------------------------------------------------------------+-------------+-------------------+-------------------
+ 21480000109           | FreeStyle Libre 2 Plus Sensor                               |      353318 |       29139717.47 |             82.47
+ 0601023AZBBAGAG       | Mounjaro KwikPen 5mg/0.6ml inj 2.4ml pre-filled pens        |       94964 |       18287626.53 |            192.57
+ 0601023AZBBACAC       | Mounjaro KwikPen 7.5mg/0.6ml inj 2.4ml pre-filled pens      |       39588 |       10640347.60 |            268.78
+ 0302000AABBAAAA       | Trimbow 87microg/dose / 5microg/dose / 9microg/dose inh     |      213146 |       10547775.66 |             49.49
+ 0302000ABBCAAAB       | Fostair 100micrograms/dose / 6micrograms/dose inhaler       |      268685 |        9820088.59 |             36.55
+ 0208020AAAAACAC       | Edoxaban 60mg tablets                                       |      186628 |        9445809.35 |             50.61
+ 0601023AZBBAFAF       | Mounjaro KwikPen 10mg/0.6ml inj 2.4ml pre-filled pens       |       29277 |        7993300.53 |            273.02
+ 0601023ANAAAAAA       | Empagliflozin 10mg tablets                                  |      204733 |        7532251.62 |             36.79
+ 0601023ANAAABAB       | Empagliflozin 25mg tablets                                  |      187651 |        7135091.47 |             38.02
+ 0601023AZAAAGAG       | Tirzepatide 5mg/0.6ml inj 2.4ml pf dispos dev               |       34540 |        6784707.46 |            196.43
+ 0302000Z0BBAAAA       | Trelegy Ellipta 92microg/55microg/22microg/dose dry pdr inh |      136787 |        6667261.38 |             48.74
+ 0302000ABBBAAAA       | Fostair NEXThaler 100microg/dose / 6microg/dose dry pdr inh |      184297 |        6419544.16 |             34.83
+ 0302000K0BDABAM       | Symbicort 200/6 Turbohaler                                  |      175200 |        6189766.28 |             35.33
+ 0601023AGAAABAB       | Dapagliflozin 10mg tablets                                  |      982166 |        5934395.38 |              6.04
+ 0601023AEAAAAAA       | Linagliptin 5mg tablets                                     |      210126 |        5874741.95 |             27.96
+ 0208020AAAAABAB       | Edoxaban 30mg tablets                                       |      133384 |        5516920.01 |             41.36
+ 0704020AEAAABAB       | Mirabegron 50mg modified-release tablets                    |      208802 |        5397477.77 |             25.85
+ 0601023AZAAACAC       | Tirzepatide 7.5mg/0.6ml inj 2.4ml pf dispos dev             |       18572 |        5076886.62 |            273.36
+ 0301040W0BBAAAA       | Anoro Ellipta 55microg/dose / 22microg/dose dry pdr inh     |      117248 |        4167242.80 |             35.54
+ 0205052AEAAACAC       | Sacubitril 24mg / Valsartan 26mg tablets                    |       51706 |        4081961.05 |             78.95
+(20 rows)
+
