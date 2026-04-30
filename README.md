@@ -10,6 +10,7 @@ The project uses pharmacy domain knowledge and reproducible SQL workflows to ide
 - [Quick Reproduction](#quick-reproduction)
 - [Analysis Queries](#analysis-queries)
 - [Validation Summary](#validation-summary)
+- [Visualizations](#visualizations)
 - [Evidence Screenshots](#evidence-screenshots)
 - [Interpretation Caveats](#interpretation-caveats)
 - [Methodology Notes](docs/methodology.md)
@@ -51,6 +52,7 @@ NHS prescribing data contains millions of real-world medicines usage and cost re
 - Docker Compose
 - SQL
 - psql
+- Python standard library for reproducible SVG charts
 - Git / GitHub
 - Text outputs and SVG evidence screenshots
 
@@ -65,13 +67,15 @@ nhs-prescribing-sql-analytics/
 ├── docs/
 │   └── methodology.md
 ├── scripts/
-│   └── run_all_queries.sh
+│   ├── run_all_queries.sh
+│   └── generate_visualizations.py
 ├── sql/
 │   ├── 00_schema/
 │   ├── 01_basic/
 │   ├── 02_intermediate/
 │   └── 03_advanced/
 ├── outputs/
+├── visualizations/
 └── screenshots/
 ```
 
@@ -125,6 +129,14 @@ PGPASSWORD=postgres ./scripts/run_all_queries.sh
 ```
 
 The script regenerates `outputs/00_validation_checks.txt` and all nine analysis output files.
+
+Generate SVG visualizations from the committed text outputs:
+
+```bash
+python3 scripts/generate_visualizations.py
+```
+
+This step does not require the full raw CSV or a running database because it reads the small files in `outputs/`.
 
 Connection defaults match `docker-compose.yml`:
 
@@ -207,6 +219,28 @@ Full evidence file:
 outputs/00_validation_checks.txt
 ```
 
+## Visualizations
+
+The charts below are generated from committed SQL output files using `scripts/generate_visualizations.py`. They are intended as reviewer-friendly summaries, not as a replacement for the SQL outputs.
+
+Top BNF chemical substances by actual cost:
+
+![Top BNF chemical substances by actual cost](visualizations/top_chemicals_by_cost.svg)
+
+[Open top chemicals chart](visualizations/top_chemicals_by_cost.svg)
+
+Top ICBs by prescribing actual cost:
+
+![Top ICBs by prescribing actual cost](visualizations/top_icbs_by_cost.svg)
+
+[Open top ICBs chart](visualizations/top_icbs_by_cost.svg)
+
+Highest average cost per item by BNF chemical:
+
+![Highest average cost per item by BNF chemical](visualizations/highest_cost_per_item.svg)
+
+[Open highest cost per item chart](visualizations/highest_cost_per_item.svg)
+
 ## Evidence Screenshots
 
 Validation summary:
@@ -238,6 +272,7 @@ Completed:
 - Full January 2026 dataset loaded into PostgreSQL.
 - Schema, indexes, validation checks, and main analysis queries created.
 - Reproducible output regeneration via `scripts/run_all_queries.sh`.
+- Reproducible SVG visualizations generated from committed SQL outputs.
 - Text outputs and SVG evidence screenshots committed.
 - Methodology notes added in `docs/methodology.md`.
 - Large raw CSV excluded from Git.
@@ -245,7 +280,7 @@ Completed:
 Planned improvements:
 
 - Add volume-normalised metrics, such as cost per 1,000 items or cost per registered patients if population data is added.
-- Add a Python or BI visualisation layer.
+- Add an interactive dashboard or BI layer.
 - Extend analysis across multiple months for trend analysis.
 
 ## Licence and Attribution
