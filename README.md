@@ -51,6 +51,8 @@ nhs-prescribing-sql-analytics/
 │   └── .gitkeep
 ├── sample_data/
 │   └── prescribing_jan_2026_sample.csv
+├── docs/
+│   └── methodology.md
 ├── scripts/
 │   └── run_all_queries.sh
 ├── sql/
@@ -74,11 +76,20 @@ nhs-prescribing-sql-analytics/
 ├── outputs/
 │   ├── 00_validation_checks.txt
 │   └── analysis output text files
-├── screenshots/
-│   ├── validation_results.svg
-│   └── key_findings_outputs.svg
-└── docs/
+└── screenshots/
+    ├── validation_results.svg
+    └── key_findings_outputs.svg
 ```
+
+## Methodology
+
+A more detailed methodology note is available in:
+
+```text
+docs/methodology.md
+```
+
+It explains the data layout, ingestion approach, validation checks, analysis workflow, reproducibility evidence, and interpretation limits.
 
 ## Data Source
 
@@ -91,6 +102,22 @@ This project uses public NHSBSA Open Data.
 - Official source: https://opendata.nhsbsa.net/dataset/english-prescribing-dataset-epd-with-snomed-code
 
 The raw CSV is not committed to this repository because it is several GB in size.
+
+The repository separates full local data from committed sample data:
+
+```text
+data/
+```
+
+Used for the full local raw dataset. Large files in this folder are ignored by Git.
+
+```text
+sample_data/
+```
+
+Used for a small committed sample that allows reviewers to inspect the structure without downloading the full dataset.
+
+The main analysis outputs were generated from the full January 2026 dataset in `data/`, not from the sample file.
 
 For this project, the full local CSV was approximately 7.2 GB and loaded into PostgreSQL as:
 
@@ -454,6 +481,7 @@ Completed:
 - Validation output captured as a reproducible text artifact
 - Evidence screenshots added for validation results and key query highlights
 - One-command script added to regenerate all validation and analysis outputs
+- Methodology documentation added for data layout, validation, analysis workflow, and interpretation limits
 - Small sample dataset added
 - Large raw CSV excluded from Git
 
