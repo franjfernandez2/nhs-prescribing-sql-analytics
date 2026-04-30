@@ -1,6 +1,7 @@
--- 03_high_cost_practices.sql
+-- 02_high_cost_practices.sql
 -- GP practices with the highest total actual prescribing cost.
 -- Dataset: NHS English Prescribing Data, January 2026.
+-- Output: outputs/06_high_cost_practices.txt
 
 SELECT
     icb_name,

@@ -1,6 +1,7 @@
 -- 01_icb_rankings_window_functions.sql
 -- ICB cost rankings using window functions.
 -- Dataset: NHS English Prescribing Data, January 2026.
+-- Output: outputs/08_icb_rankings_window_functions.txt
 
 WITH icb_costs AS (
     SELECT

@@ -1,6 +1,7 @@
 -- 02_top_presentations_by_cost.sql
 -- Top 20 BNF presentations by total actual cost.
 -- Dataset: NHS English Prescribing Data, January 2026.
+-- Output: outputs/02_top_presentations_by_cost.txt
 
 SELECT
     bnf_presentation_code,

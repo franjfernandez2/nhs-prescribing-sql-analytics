@@ -21,15 +21,11 @@
 -- if needed, and save it locally as data/prescribing_jan_2026.csv.
 --
 -- Important:
--- Run this script from the project root:
--- /Users/fff/nhs-prescribing-sql-analytics
+-- Run this script from the repository root so the relative data path resolves correctly.
 --
 -- First create the table:
 -- psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing -f sql/00_schema/schema.sql
 --
 -- Then load the CSV:
 -- psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing -f sql/00_schema/load_data.sql
---
--- Password:
--- postgres
 \copy raw_prescribing_jan_2026 FROM 'data/prescribing_jan_2026.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');

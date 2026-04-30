@@ -1,7 +1,8 @@
--- 02_cost_per_item_by_chemical.sql
+-- 03_cost_per_item_by_chemical.sql
 -- Highest average cost per item by BNF chemical substance.
 -- A minimum item threshold avoids tiny-volume chemicals dominating the ranking.
 -- Dataset: NHS English Prescribing Data, January 2026.
+-- Output: outputs/07_cost_per_item_by_chemical.txt
 
 SELECT
     bnf_chemical_substance_code,

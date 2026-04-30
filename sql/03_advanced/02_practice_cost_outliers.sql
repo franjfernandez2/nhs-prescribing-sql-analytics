@@ -2,6 +2,7 @@
 -- GP practices with unusually high total prescribing costs compared with peers in the same ICB.
 -- Uses ICB-level quartiles and the interquartile range to flag high-cost outliers.
 -- Dataset: NHS English Prescribing Data, January 2026.
+-- Output: outputs/09_practice_cost_outliers.txt
 
 WITH practice_costs AS (
     SELECT

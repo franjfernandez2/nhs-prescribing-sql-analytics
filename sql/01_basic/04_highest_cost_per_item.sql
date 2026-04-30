@@ -1,3 +1,9 @@
+-- 04_highest_cost_per_item.sql
+-- BNF chemical substances with the highest average actual cost per prescribed item.
+-- Applies a minimum item threshold to avoid tiny-volume substances dominating the ranking.
+-- Dataset: NHS English Prescribing Data, January 2026.
+-- Output: outputs/04_highest_cost_per_item.txt
+
 SELECT
     bnf_chemical_substance,
     SUM(items) AS total_items,

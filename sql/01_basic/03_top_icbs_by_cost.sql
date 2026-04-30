@@ -1,3 +1,8 @@
+-- 03_top_icbs_by_cost.sql
+-- Top 20 Integrated Care Boards by total actual prescribing cost.
+-- Dataset: NHS English Prescribing Data, January 2026.
+-- Output: outputs/03_top_icbs_by_cost.txt
+
 SELECT
     icb_name,
     icb_code,

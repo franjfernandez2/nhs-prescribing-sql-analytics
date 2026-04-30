@@ -1,3 +1,8 @@
+-- 01_top_chemicals_per_icb.sql
+-- Top five BNF chemical substances by total actual cost within each ICB.
+-- Dataset: NHS English Prescribing Data, January 2026.
+-- Output: outputs/05_top_chemicals_per_icb.txt
+
 WITH chemical_costs_by_icb AS (
     SELECT
         icb_name,

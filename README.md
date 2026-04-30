@@ -8,6 +8,16 @@ The goal is to explore prescribing cost patterns across England, identify high-c
 
 This project combines pharmacy domain knowledge with SQL, PostgreSQL, data analysis, and healthcare data interpretation.
 
+## Key Findings
+
+From the full January 2026 dataset loaded locally into PostgreSQL:
+
+- Tirzepatide was the highest-cost BNF chemical substance by total actual cost, with £67.2m across 292,949 items.
+- FreeStyle Libre 2 Plus Sensor was the highest-cost individual presentation, with £29.1m actual cost and an average cost of £82.47 per item.
+- The highest total-cost ICBs were large regional systems such as North East and North Cumbria, Greater Manchester, and Cheshire and Merseyside; these rankings should be interpreted alongside prescribing volume and population size.
+- High practice-level costs are analytical signals for further investigation, not evidence of poor prescribing quality without adjustment for practice size, demographics, disease burden, case mix, and specialist responsibilities.
+- The analysis shows how SQL can identify cost drivers, regional variation, high-unit-cost medicines, and outlier signals in a real healthcare dataset.
+
 ## Why This Project Matters
 
 NHS prescribing data contains millions of rows of real-world medicines usage and cost information.
@@ -41,11 +51,14 @@ nhs-prescribing-sql-analytics/
 │   └── .gitkeep
 ├── sample_data/
 │   └── prescribing_jan_2026_sample.csv
+├── scripts/
+│   └── run_all_queries.sh
 ├── sql/
 │   ├── 00_schema/
 │   │   ├── schema.sql
 │   │   ├── load_data.sql
-│   │   └── 02_indexes.sql
+│   │   ├── 02_indexes.sql
+│   │   └── 03_validation_checks.sql
 │   ├── 01_basic/
 │   │   ├── 01_top_chemicals_by_cost.sql
 │   │   ├── 02_top_presentations_by_cost.sql
@@ -59,7 +72,11 @@ nhs-prescribing-sql-analytics/
 │       ├── 01_icb_rankings_window_functions.sql
 │       └── 02_practice_cost_outliers.sql
 ├── outputs/
+│   ├── 00_validation_checks.txt
+│   └── analysis output text files
 ├── screenshots/
+│   ├── validation_results.svg
+│   └── key_findings_outputs.svg
 └── docs/
 ```
 
@@ -114,6 +131,12 @@ psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing
 
 The project was developed against a local PostgreSQL database exposed on host port 5433.
 
+To start the local PostgreSQL container defined in `docker-compose.yml`:
+
+```bash
+docker compose up -d
+```
+
 To create the schema:
 
 ```bash
@@ -131,6 +154,20 @@ To create recommended indexes and update planner statistics:
 ```bash
 psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing -f sql/00_schema/02_indexes.sql
 ```
+
+To run basic validation checks after loading the data:
+
+```bash
+psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing -f sql/00_schema/03_validation_checks.sql
+```
+
+To regenerate all validation and analysis outputs in one command:
+
+```bash
+PGPASSWORD=postgres ./scripts/run_all_queries.sh
+```
+
+The script writes the regenerated files to `outputs/` and uses the same default connection settings as the local Docker Compose setup. You can override `PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, or `PGPASSWORD` if needed.
 
 The index script creates indexes on commonly used analytical columns such as:
 
@@ -240,6 +277,7 @@ This is an exploratory outlier detection method and should be treated as a signa
 The following outputs were generated from the full January 2026 dataset:
 
 ```text
+outputs/00_validation_checks.txt
 outputs/01_top_chemicals_by_cost.txt
 outputs/02_top_presentations_by_cost.txt
 outputs/03_top_icbs_by_cost.txt
@@ -265,6 +303,62 @@ Output row counts:
 09_practice_cost_outliers.txt: 100 rows
 ```
 
+## Validation Results
+
+The validation checks were run against the full January 2026 dataset after loading it into PostgreSQL.
+
+Evidence file:
+
+```text
+outputs/00_validation_checks.txt
+```
+
+Dataset-level validation:
+
+```text
+row_count:                    18,342,436
+distinct_year_months:         1
+min_year_month:               2026-01
+max_year_month:               2026-01
+distinct_icbs:                43
+distinct_practices:           9,279
+distinct_chemical_substances: 1,801
+national_items:               108,270,468
+national_actual_cost:         £904,922,906.48
+```
+
+Data quality checks:
+
+```text
+missing_year_month:           0
+missing_icb_code:             0
+missing_practice_code:        0
+missing_chemical_code:        0
+null_items:                   0
+null_actual_cost:             0
+negative_items:               0
+negative_actual_cost:         0
+```
+
+These checks confirm that the loaded table matches the expected January 2026 scope and has no missing or negative values in the core analytical fields checked by `sql/00_schema/03_validation_checks.sql`.
+
+## Evidence Screenshots
+
+The repository includes lightweight SVG screenshots showing validation results and selected query output highlights:
+
+```text
+screenshots/validation_results.svg
+screenshots/key_findings_outputs.svg
+```
+
+Validation screenshot:
+
+![Validation results](screenshots/validation_results.svg)
+
+Query output highlights:
+
+![Query output highlights](screenshots/key_findings_outputs.svg)
+
 ## How To Reproduce
 
 1. Clone the repository.
@@ -275,10 +369,10 @@ Output row counts:
 data/prescribing_jan_2026.csv
 ```
 
-4. Start or connect to a PostgreSQL database called:
+4. Start the local PostgreSQL container, or connect to an existing PostgreSQL database called `nhs_prescribing`:
 
-```text
-nhs_prescribing
+```bash
+docker compose up -d
 ```
 
 5. Create the table:
@@ -299,9 +393,21 @@ psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing -f sql/00_schema/load_d
 psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing -f sql/00_schema/02_indexes.sql
 ```
 
-8. Run the SQL files in the `sql/` folder.
+8. Run validation checks:
 
-Example:
+```bash
+psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing -f sql/00_schema/03_validation_checks.sql
+```
+
+9. Regenerate every validation and analysis output file:
+
+```bash
+PGPASSWORD=postgres ./scripts/run_all_queries.sh
+```
+
+This creates or refreshes all files in `outputs/`, including `outputs/00_validation_checks.txt` and the nine analysis output files.
+
+Alternatively, run an individual SQL file manually:
 
 ```bash
 psql -h 127.0.0.1 -p 5433 -U postgres -d nhs_prescribing \
@@ -339,18 +445,20 @@ Completed:
 - Full January 2026 dataset loaded
 - 18,342,436 rows imported
 - Indexes created
+- Docker Compose file added for local PostgreSQL setup
+- Validation checks added for row counts, date range, nulls, negative values, and sample rows
 - Main SQL analyses written
 - Empty SQL files removed
 - Duplicate SQL numbering cleaned
 - Outputs generated from the full dataset
+- Validation output captured as a reproducible text artifact
+- Evidence screenshots added for validation results and key query highlights
+- One-command script added to regenerate all validation and analysis outputs
 - Small sample dataset added
 - Large raw CSV excluded from Git
 
 Planned improvements:
 
-- Add screenshots of query outputs
-- Add a docker-compose.yml file for easier reproducibility
-- Add a small automated script to run all main queries
 - Add more advanced normalisation methods, such as cost per 1,000 items or cost per practice volume band
 - Add visualisations in a future Python or BI layer
 
@@ -375,6 +483,7 @@ This project demonstrates the ability to:
 - Load a multi-million-row CSV into PostgreSQL
 - Write SQL queries using aggregation, grouping, ordering, filtering, CTEs, and window functions
 - Create indexes for analytical workloads
+- Validate row counts, date ranges, nulls, negative values, and sample records
 - Export reproducible query outputs
 - Document a healthcare analytics project clearly
 - Apply pharmacy domain knowledge when interpreting prescribing data
