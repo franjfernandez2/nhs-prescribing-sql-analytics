@@ -4,6 +4,16 @@ SQL portfolio project analysing public NHS English Prescribing Data with Postgre
 
 The project uses pharmacy domain knowledge and reproducible SQL workflows to identify prescribing cost drivers, regional variation, high-unit-cost medicines, and exploratory practice-level outlier signals.
 
+## Quick Links
+
+- [Key Results](#key-results)
+- [Quick Reproduction](#quick-reproduction)
+- [Analysis Queries](#analysis-queries)
+- [Validation Summary](#validation-summary)
+- [Evidence Screenshots](#evidence-screenshots)
+- [Interpretation Caveats](#interpretation-caveats)
+- [Methodology Notes](docs/methodology.md)
+
 ## Key Results
 
 Analysis was run on the full January 2026 NHSBSA English Prescribing Dataset loaded locally into PostgreSQL.
@@ -129,18 +139,38 @@ You can override these environment variables if needed.
 
 ## Analysis Queries
 
-| Area | Query | Output |
-| --- | --- | --- |
-| Validation | `sql/00_schema/03_validation_checks.sql` | `outputs/00_validation_checks.txt` |
-| Top BNF chemicals by cost | `sql/01_basic/01_top_chemicals_by_cost.sql` | `outputs/01_top_chemicals_by_cost.txt` |
-| Top presentations by cost | `sql/01_basic/02_top_presentations_by_cost.sql` | `outputs/02_top_presentations_by_cost.txt` |
-| Top ICBs by cost | `sql/01_basic/03_top_icbs_by_cost.sql` | `outputs/03_top_icbs_by_cost.txt` |
-| Highest cost per item | `sql/01_basic/04_highest_cost_per_item.sql` | `outputs/04_highest_cost_per_item.txt` |
-| Top chemicals per ICB | `sql/02_intermediate/01_top_chemicals_per_icb.sql` | `outputs/05_top_chemicals_per_icb.txt` |
-| High-cost practices | `sql/02_intermediate/02_high_cost_practices.sql` | `outputs/06_high_cost_practices.txt` |
-| Cost per item by chemical | `sql/02_intermediate/03_cost_per_item_by_chemical.sql` | `outputs/07_cost_per_item_by_chemical.txt` |
-| ICB rankings with window functions | `sql/03_advanced/01_icb_rankings_window_functions.sql` | `outputs/08_icb_rankings_window_functions.txt` |
-| Practice cost outlier detection | `sql/03_advanced/02_practice_cost_outliers.sql` | `outputs/09_practice_cost_outliers.txt` |
+Each query has a matching captured output so reviewers can inspect the SQL and verify the result without rerunning the full dataset locally.
+
+- **Validation**
+  - Query: [`03_validation_checks.sql`](sql/00_schema/03_validation_checks.sql)
+  - Output: [`00_validation_checks.txt`](outputs/00_validation_checks.txt)
+- **Top BNF chemicals by cost**
+  - Query: [`01_top_chemicals_by_cost.sql`](sql/01_basic/01_top_chemicals_by_cost.sql)
+  - Output: [`01_top_chemicals_by_cost.txt`](outputs/01_top_chemicals_by_cost.txt)
+- **Top presentations by cost**
+  - Query: [`02_top_presentations_by_cost.sql`](sql/01_basic/02_top_presentations_by_cost.sql)
+  - Output: [`02_top_presentations_by_cost.txt`](outputs/02_top_presentations_by_cost.txt)
+- **Top ICBs by cost**
+  - Query: [`03_top_icbs_by_cost.sql`](sql/01_basic/03_top_icbs_by_cost.sql)
+  - Output: [`03_top_icbs_by_cost.txt`](outputs/03_top_icbs_by_cost.txt)
+- **Highest cost per item**
+  - Query: [`04_highest_cost_per_item.sql`](sql/01_basic/04_highest_cost_per_item.sql)
+  - Output: [`04_highest_cost_per_item.txt`](outputs/04_highest_cost_per_item.txt)
+- **Top chemicals per ICB**
+  - Query: [`01_top_chemicals_per_icb.sql`](sql/02_intermediate/01_top_chemicals_per_icb.sql)
+  - Output: [`05_top_chemicals_per_icb.txt`](outputs/05_top_chemicals_per_icb.txt)
+- **High-cost practices**
+  - Query: [`02_high_cost_practices.sql`](sql/02_intermediate/02_high_cost_practices.sql)
+  - Output: [`06_high_cost_practices.txt`](outputs/06_high_cost_practices.txt)
+- **Cost per item by chemical**
+  - Query: [`03_cost_per_item_by_chemical.sql`](sql/02_intermediate/03_cost_per_item_by_chemical.sql)
+  - Output: [`07_cost_per_item_by_chemical.txt`](outputs/07_cost_per_item_by_chemical.txt)
+- **ICB rankings with window functions**
+  - Query: [`01_icb_rankings_window_functions.sql`](sql/03_advanced/01_icb_rankings_window_functions.sql)
+  - Output: [`08_icb_rankings_window_functions.txt`](outputs/08_icb_rankings_window_functions.txt)
+- **Practice cost outlier detection**
+  - Query: [`02_practice_cost_outliers.sql`](sql/03_advanced/02_practice_cost_outliers.sql)
+  - Output: [`09_practice_cost_outliers.txt`](outputs/09_practice_cost_outliers.txt)
 
 ## Validation Summary
 
@@ -183,9 +213,13 @@ Validation summary:
 
 ![Validation results](screenshots/validation_results.svg)
 
+[Open validation screenshot](screenshots/validation_results.svg)
+
 Query output highlights:
 
 ![Query output highlights](screenshots/key_findings_outputs.svg)
+
+[Open query output highlights screenshot](screenshots/key_findings_outputs.svg)
 
 The screenshots are visual summaries. The text files in `outputs/` are the source of truth for exact results.
 
