@@ -244,7 +244,7 @@ Highest average cost per item by BNF chemical:
 
 ## Analytical Interpretation
 
-> These interpretations are based on the January 2026 dataset and should be read as exploratory healthcare analytics, not clinical judgement.
+> **Interpretation note:** These interpretations are based on the January 2026 dataset and should be read as exploratory healthcare analytics, not clinical judgement.
 
 ### 1. A small number of medicines account for very large absolute spend
 
