@@ -244,31 +244,25 @@ Highest average cost per item by BNF chemical:
 
 ## Analytical Interpretation
 
-These interpretations are based on the January 2026 dataset and should be read as exploratory healthcare analytics, not clinical judgement.
+> These interpretations are based on the January 2026 dataset and should be read as exploratory healthcare analytics, not clinical judgement.
 
 ### 1. A small number of medicines account for very large absolute spend
 
-Tirzepatide was the highest-cost BNF chemical substance in this month, with £67.2m actual cost across 292,949 items. Other high-cost areas included diabetes technologies, inhaled respiratory combinations, anticoagulants, stoma appliances, insulin products, and specialist medicines.
-
-Why it matters: absolute spend rankings help prioritise medicines or categories for deeper financial review, forecasting, procurement discussion, formulary monitoring, and trend analysis.
-
-Key limitation: high total cost can reflect appropriate high-volume or high-value use. It does not prove waste, overprescribing, or inappropriate clinical practice.
+- **Finding:** Tirzepatide was the highest-cost BNF chemical substance in this month, with £67.2m actual cost across 292,949 items. Other high-cost areas included diabetes technologies, inhaled respiratory combinations, anticoagulants, stoma appliances, insulin products, and specialist medicines.
+- **Why it matters:** Absolute spend rankings help prioritise medicines or categories for deeper financial review, forecasting, procurement discussion, formulary monitoring, and trend analysis.
+- **Key limitation:** High total cost can reflect appropriate high-volume or high-value use. It does not prove waste, overprescribing, or inappropriate clinical practice.
 
 ### 2. Regional cost differences need denominator adjustment before judgement
 
-The highest total-cost ICBs included North East and North Cumbria, Greater Manchester, and Cheshire and Merseyside. These rankings are useful for identifying where prescribing spend is concentrated, but they are not enough to compare organisational efficiency.
-
-Why it matters: ICB-level rankings can guide follow-up questions about population need, service configuration, prescribing volume, and local formulary decisions.
-
-Key limitation: fair comparison would require denominators such as population size, registered patients, age profile, deprivation, disease prevalence, case mix, and specialist prescribing responsibilities.
+- **Finding:** The highest total-cost ICBs included North East and North Cumbria, Greater Manchester, and Cheshire and Merseyside. These rankings identify where prescribing spend is concentrated, but they are not enough to compare organisational efficiency.
+- **Why it matters:** ICB-level rankings can guide follow-up questions about population need, service configuration, prescribing volume, and local formulary decisions.
+- **Key limitation:** Fair comparison would require denominators such as population size, registered patients, age profile, deprivation, disease prevalence, case mix, and specialist prescribing responsibilities.
 
 ### 3. High average cost per item highlights specialist or high-unit-cost products
 
-The highest average cost-per-item results were dominated by specialist nutrition products, somatropin, selected antipsychotic medicines, hormonal treatments, and appliance categories. These records are useful for identifying products where small item volumes can still create material spend.
-
-Why it matters: average cost per item is useful for spotting high-unit-cost categories that may be hidden in aggregate spend analysis.
-
-Key limitation: high unit cost is often clinically expected for specialist products. This metric should trigger targeted review, not automatic concern.
+- **Finding:** The highest average cost-per-item results were dominated by specialist nutrition products, somatropin, selected antipsychotic medicines, hormonal treatments, and appliance categories. These records show where small item volumes can still create material spend.
+- **Why it matters:** Average cost per item is useful for spotting high-unit-cost categories that may be hidden in aggregate spend analysis.
+- **Key limitation:** High unit cost is often clinically expected for specialist products. This metric should trigger targeted review, not automatic concern.
 
 ## Evidence Screenshots
 
