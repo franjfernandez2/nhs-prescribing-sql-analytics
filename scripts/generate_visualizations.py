@@ -58,9 +58,37 @@ def to_float(value: str) -> float:
     return float(re.sub(r"[^0-9.\-]", "", value))
 
 
-def short_label(label: str, max_len: int = 34) -> str:
+def clean_label(label: str) -> str:
     label = label.replace("NHS ", "").replace(" INTEGRATED CARE BOARD", "")
-    return label if len(label) <= max_len else label[: max_len - 1] + "…"
+    return " ".join(label.split())
+
+
+def wrap_label(label: str, max_line_len: int = 38, max_lines: int = 2) -> List[str]:
+    """Wrap long labels for SVG text without relying on browser CSS wrapping."""
+    words = clean_label(label).split()
+    lines: List[str] = []
+    current = ""
+
+    for word in words:
+        candidate = word if not current else f"{current} {word}"
+        if len(candidate) <= max_line_len:
+            current = candidate
+            continue
+        if current:
+            lines.append(current)
+        current = word
+        if len(lines) == max_lines:
+            break
+
+    if len(lines) < max_lines and current:
+        lines.append(current)
+
+    consumed = " ".join(lines)
+    original = clean_label(label)
+    if len(lines) == max_lines and len(consumed) < len(original):
+        lines[-1] = lines[-1][: max_line_len - 1].rstrip() + "…"
+
+    return lines or [original]
 
 
 def money_millions(value: float) -> str:
@@ -80,7 +108,7 @@ def bar_chart_svg(
     if not data:
         raise ValueError(f"No rows supplied for {title}")
 
-    margin_left = 330
+    margin_left = 420
     margin_right = 170
     margin_top = 110
     margin_bottom = 55
@@ -110,10 +138,15 @@ def bar_chart_svg(
         y = margin_top + i * row_height
         bar_width = 0 if max_value == 0 else (row.value / max_value) * chart_width
         color = colors["bar"] if i % 2 == 0 else colors["bar_alt"]
-        label = short_label(row.label)
+        label_lines = wrap_label(row.label)
+        label_y_start = y + (18 if len(label_lines) == 1 else 12)
+        label_tspans = "".join(
+            f'<tspan x="44" dy="{0 if j == 0 else 18}">{html.escape(line)}</tspan>'
+            for j, line in enumerate(label_lines)
+        )
         parts.extend(
             [
-                f'<text x="44" y="{y + 26}" fill="{colors["text"]}" font-family="Arial, Helvetica, sans-serif" font-size="16">{html.escape(label)}</text>',
+                f'<text x="44" y="{label_y_start}" fill="{colors["text"]}" font-family="Arial, Helvetica, sans-serif" font-size="15">{label_tspans}</text>',
                 f'<rect x="{margin_left}" y="{y + 8}" width="{chart_width}" height="24" rx="6" fill="#21262d"/>',
                 f'<rect x="{margin_left}" y="{y + 8}" width="{bar_width:.1f}" height="24" rx="6" fill="{color}"/>',
                 f'<text x="{margin_left + chart_width + 18}" y="{y + 26}" fill="{colors["text"]}" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">{html.escape(value_formatter(row.value))}</text>',

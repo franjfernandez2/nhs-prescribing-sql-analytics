@@ -3,45 +3,45 @@
 <rect x="20" y="20" width="1060" height="605" rx="16" fill="#161b22" stroke="#30363d"/>
 <text x="44" y="58" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Top ICBs by prescribing actual cost</text>
 <text x="44" y="87" fill="#8b949e" font-family="Arial, Helvetica, sans-serif" font-size="16">January 2026 NHS English Prescribing Dataset · top 10 ICBs by total actual cost</text>
-<text x="44" y="136" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">NORTH EAST AND NORTH CUMBRIA</text>
-<rect x="330" y="118" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="118" width="600.0" height="24" rx="6" fill="#2f81f7"/>
+<text x="44" y="128" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">NORTH EAST AND NORTH CUMBRIA</tspan></text>
+<rect x="420" y="118" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="118" width="510.0" height="24" rx="6" fill="#2f81f7"/>
 <text x="948" y="136" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£55.0m</text>
-<text x="44" y="184" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">GREATER MANCHESTER</text>
-<rect x="330" y="166" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="166" width="548.4" height="24" rx="6" fill="#56d364"/>
+<text x="44" y="176" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">GREATER MANCHESTER</tspan></text>
+<rect x="420" y="166" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="166" width="466.1" height="24" rx="6" fill="#56d364"/>
 <text x="948" y="184" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£50.3m</text>
-<text x="44" y="232" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">CHESHIRE AND MERSEYSIDE</text>
-<rect x="330" y="214" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="214" width="515.9" height="24" rx="6" fill="#2f81f7"/>
+<text x="44" y="224" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">CHESHIRE AND MERSEYSIDE</tspan></text>
+<rect x="420" y="214" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="214" width="438.5" height="24" rx="6" fill="#2f81f7"/>
 <text x="948" y="232" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£47.3m</text>
-<text x="44" y="280" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">WEST YORKSHIRE</text>
-<rect x="330" y="262" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="262" width="447.3" height="24" rx="6" fill="#56d364"/>
+<text x="44" y="272" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">WEST YORKSHIRE</tspan></text>
+<rect x="420" y="262" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="262" width="380.2" height="24" rx="6" fill="#56d364"/>
 <text x="948" y="280" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£41.0m</text>
-<text x="44" y="328" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">HUMBER AND NORTH YORKSHIRE</text>
-<rect x="330" y="310" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="310" width="337.5" height="24" rx="6" fill="#2f81f7"/>
+<text x="44" y="320" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">HUMBER AND NORTH YORKSHIRE</tspan></text>
+<rect x="420" y="310" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="310" width="286.8" height="24" rx="6" fill="#2f81f7"/>
 <text x="948" y="328" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£30.9m</text>
-<text x="44" y="376" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">SUSSEX</text>
-<rect x="330" y="358" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="358" width="325.7" height="24" rx="6" fill="#56d364"/>
+<text x="44" y="368" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">SUSSEX</tspan></text>
+<rect x="420" y="358" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="358" width="276.8" height="24" rx="6" fill="#56d364"/>
 <text x="948" y="376" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£29.9m</text>
-<text x="44" y="424" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">KENT AND MEDWAY</text>
-<rect x="330" y="406" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="406" width="325.6" height="24" rx="6" fill="#2f81f7"/>
+<text x="44" y="416" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">KENT AND MEDWAY</tspan></text>
+<rect x="420" y="406" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="406" width="276.8" height="24" rx="6" fill="#2f81f7"/>
 <text x="948" y="424" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£29.9m</text>
-<text x="44" y="472" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">HAMPSHIRE AND ISLE OF WIGHT</text>
-<rect x="330" y="454" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="454" width="325.1" height="24" rx="6" fill="#56d364"/>
+<text x="44" y="464" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">HAMPSHIRE AND ISLE OF WIGHT</tspan></text>
+<rect x="420" y="454" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="454" width="276.3" height="24" rx="6" fill="#56d364"/>
 <text x="948" y="472" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£29.8m</text>
-<text x="44" y="520" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">LANCASHIRE AND SOUTH CUMBRIA</text>
-<rect x="330" y="502" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="502" width="319.5" height="24" rx="6" fill="#2f81f7"/>
+<text x="44" y="512" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">LANCASHIRE AND SOUTH CUMBRIA</tspan></text>
+<rect x="420" y="502" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="502" width="271.6" height="24" rx="6" fill="#2f81f7"/>
 <text x="948" y="520" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£29.3m</text>
-<text x="44" y="568" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="16">NORTH WEST LONDON</text>
-<rect x="330" y="550" width="600" height="24" rx="6" fill="#21262d"/>
-<rect x="330" y="550" width="297.2" height="24" rx="6" fill="#56d364"/>
+<text x="44" y="560" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15"><tspan x="44" dy="0">NORTH WEST LONDON</tspan></text>
+<rect x="420" y="550" width="510" height="24" rx="6" fill="#21262d"/>
+<rect x="420" y="550" width="252.6" height="24" rx="6" fill="#56d364"/>
 <text x="948" y="568" fill="#e6edf3" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">£27.2m</text>
 <text x="44" y="619" fill="#8b949e" font-family="Arial, Helvetica, sans-serif" font-size="13">Source: generated from committed SQL output files in outputs/</text>
 </svg>
